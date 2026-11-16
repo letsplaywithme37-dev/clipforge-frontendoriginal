@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d16">
+
+  <meta
+    name="description"
+    content="ClipForge AI Studio - Turn long videos into short-form content."
+  >
+
+  <title>ClipForge AI Studio</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="topbar">
+    <div class="logo">✦ ClipForge</div>
+    <span class="version">AI VIDEO STUDIO</span>
+  </header>
+
+  <main class="container">
+
+    <!-- WELCOME -->
+    <section class="welcome">
+      <p class="eyebrow">YOUR CREATOR WORKSPACE</p>
+
+      <h1>
+        Make every moment <span>count.</span>
+      </h1>
+
+      <p class="muted">
+        Turn long videos into short-form content.
+      </p>
+    </section>
+
+    <!-- 01: VIDEO UPLOAD -->
+    <section class="panel">
+
+      <div class="section-heading">
+        <span class="number">01</span>
+        <h2>Upload your video</h2>
+      </div>
+
+      <label class="upload-box" for="videoFile">
+
+        <div class="upload-icon">↑</div>
+
+        <h3>Choose a video</h3>
+
+        <p>Tap here to select from your phone</p>
+
+        <span class="upload-button">
+          Browse videos
+        </span>
+
+        <input
+          type="file"
+          id="videoFile"
+          accept="video/*"
+        >
+
+      </label>
+
+      <video
+        id="videoPreview"
+        controls
+        playsinline
+        preload="metadata"
+      ></video>
+
+      <div
+        id="videoInfo"
+        class="muted info"
+        aria-live="polite"
+      >
+        No video selected.
+      </div>
+
+    </section>
+
+    <!-- 02: CREATE CLIPS -->
+    <section class="panel">
+
+      <div class="section-heading">
+        <span class="number">02</span>
+        <h2>Create your clips</h2>
+      </div>
+
+      <p class="muted">
+        Select the start and end time in seconds.
+      </p>
+
+      <div class="time-grid">
+
+        <label for="startTime">
+          Start time
+
+          <input
+            id="startTime"
+            type="number"
+            min="0"
+            step="0.1"
+            value="0"
+          >
+        </label>
+
+        <label for="endTime">
+          End time
+
+          <input
+            id="endTime"
+            type="number"
+            min="0"
+            step="0.1"
+            value="15"
+          >
+        </label>
+
+      </div>
+
+      <button
+        class="button secondary"
+        id="previewButton"
+        type="button"
+      >
+        ▶ Preview selection
+      </button>
+
+      <button
+        class="button primary"
+        id="addButton"
+        type="button"
+      >
+        + Add to my clips
+      </button>
+
+    </section>
+
+    <!-- 03: MY CLIPS -->
+    <section class="panel">
+
+      <div class="section-heading">
+        <span class="number">03</span>
+        <h2>My clips</h2>
+      </div>
+
+      <div
+        id="clipList"
+        class="clip-list"
+        aria-live="polite"
+      >
+
+        <div class="empty">
+          <div class="empty-icon">✂</div>
+
+          <p>Your clips will appear here.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 04: AI SUBTITLE STUDIO -->
+    <section class="panel">
+
+      <div class="section-heading">
+        <span class="number">04</span>
+        <h2>AI Subtitle Studio</h2>
+      </div>
+
+      <p class="muted">
+        Convert spoken words into editable subtitles.
+      </p>
+
+      <label for="language">
+        Video language
+      </label>
+
+      <select
+        id="language"
+        class="language-select"
+      >
+        <option value="">Auto detect</option>
+        <option value="en">English</option>
+        <option value="hi">Hindi</option>
+        <option value="bn">Bengali</option>
+        <option value="ur">Urdu</option>
+      </select>
+
+      <button
+        class="button primary"
+        id="transcribeButton"
+        type="button"
+      >
+        ✦ Generate AI subtitles
+      </button>
+
+      <p
+        id="transcriptionStatus"
+        class="muted"
+        aria-live="polite"
+      >
+        Upload a video to get started.
+      </p>
+
+      <div
+        id="transcriptResults"
+        class="transcript-results"
+        aria-live="polite"
+      >
+        <p class="muted">
+          Your transcript will appear here.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- 05: MORE AI TOOLS -->
+    <section class="panel ai-panel">
+
+      <div class="section-heading">
+        <span class="number">05</span>
+        <h2>More AI tools</h2>
+      </div>
+
+      <div class="tool-row">
+
+        <span>✦</span>
+
+        <div>
+          <strong>AI highlight detection</strong>
+
+          <p>
+            Find interesting moments automatically.
+          </p>
+        </div>
+
+        <small>SOON</small>
+
+      </div>
+
+      <div class="tool-row">
+
+        <span>▣</span>
+
+        <div>
+          <strong>Smart vertical cropping</strong>
+
+          <p>
+            Prepare videos for Shorts and Reels.
+          </p>
+        </div>
+
+        <small>SOON</small>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    ClipForge © 2026 · Made for creators
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
